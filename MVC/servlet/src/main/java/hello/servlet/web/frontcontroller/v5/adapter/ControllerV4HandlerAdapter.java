@@ -1,7 +1,6 @@
 package hello.servlet.web.frontcontroller.v5.adapter;
 
 import hello.servlet.web.frontcontroller.ModelView;
-import hello.servlet.web.frontcontroller.v3.ControllerV3;
 import hello.servlet.web.frontcontroller.v4.ControllerV4;
 import hello.servlet.web.frontcontroller.v5.MyHandlerAdapter;
 import jakarta.servlet.ServletException;
@@ -26,8 +25,6 @@ public class ControllerV4HandlerAdapter implements MyHandlerAdapter {
 
         String viewName = controller.process(paramMap, model);
         ModelView mv = new ModelView(viewName);
-        mv.setModel(model);
-
         return mv;
     }
 
